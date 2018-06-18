@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eko​​Delivery​​Service", "Eko​​Delivery​​Service\Eko​​Delivery​​Service.csproj", "{58A9F512-0A4F-4B71-A624-DD0B984773B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eko​​Delivery​​Service.Logic", "Eko​​Delivery​​Service.Logic\Eko​​Delivery​​Service.Logic.csproj", "{0FA94FA7-E6CF-44DF-8403-A31077234E7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eko​​Delivery​​Service.DataAccess", "Eko​​Delivery​​Service.DataAccess\Eko​​Delivery​​Service.DataAccess.csproj", "{36443052-4C56-4C70-B2F8-FECB3A2CFD75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EkoDeliveryService.Logic.Test", "EkoDeliveryService.Logic.Test\EkoDeliveryService.Logic.Test.csproj", "{056B8B9C-FC43-482A-93A4-D853D4103A70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0043C27B-5242-439A-A12C-008366B4F96B}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A9F512-0A4F-4B71-A624-DD0B984773B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A9F512-0A4F-4B71-A624-DD0B984773B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A9F512-0A4F-4B71-A624-DD0B984773B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A9F512-0A4F-4B71-A624-DD0B984773B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA94FA7-E6CF-44DF-8403-A31077234E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA94FA7-E6CF-44DF-8403-A31077234E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA94FA7-E6CF-44DF-8403-A31077234E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA94FA7-E6CF-44DF-8403-A31077234E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36443052-4C56-4C70-B2F8-FECB3A2CFD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36443052-4C56-4C70-B2F8-FECB3A2CFD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36443052-4C56-4C70-B2F8-FECB3A2CFD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36443052-4C56-4C70-B2F8-FECB3A2CFD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056B8B9C-FC43-482A-93A4-D853D4103A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056B8B9C-FC43-482A-93A4-D853D4103A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056B8B9C-FC43-482A-93A4-D853D4103A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056B8B9C-FC43-482A-93A4-D853D4103A70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D60D395-A6A8-4B5C-9C31-0BCF1882827A}
+	EndGlobalSection
+EndGlobal

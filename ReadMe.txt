@@ -1,5 +1,3 @@
-# BackendEngineer
-For Test  Backend Engineer
 * This Project Use .Net Core 2.0
 1.Open Solution file (.sln) in Visual Studio 2017.
 2.Select project EkoDeliveryService and right click on the project > choose "Set as StartUp Project".
