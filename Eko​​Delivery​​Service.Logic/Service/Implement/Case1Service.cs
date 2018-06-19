@@ -21,91 +21,13 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
         {
             var text = Path.Split('-');
             var cost = 0;
-            for(var i = 0 ; i <= text.Length - 2 ; i++)
+            for (var i = 0; i <= text.Length - 2; i++)
             {
-                if(text[i].ToUpper().Equals("A"))
+                var connect = UnitOfWork.Graph.Where(w => w.PreviewNode.Equals(text[i].ToUpper()) && w.Node.Equals(text[i + 1].ToUpper()));
+                if (connect.Any())
                 {
-                    var connect = UnitOfWork.ARepository.Where(w=>w.TownName.Equals( text[i + 1].ToUpper()) );
-                    if(connect.Any())
-                    {
-                        cost = cost + connect.First().Cost;
-                        continue;
-                    }
-                    else
-                    {
-                        cost = 0;
-                        break;
-                    }
-                }
-                else if (text[i].ToUpper().Equals("B"))
-                {
-                    var connect = UnitOfWork.BRepository.Where(w => w.TownName.Equals(text[i + 1].ToUpper()));
-                    if (connect.Any())
-                    {
-                        cost = cost + connect.First().Cost;
-                        continue;
-                    }
-                    else
-                    {
-                        cost = 0;
-                        break;
-                    }
-                }
-                else if (text[i].ToUpper().Equals("C"))
-                {
-                    var connect = UnitOfWork.CRepository.Where(w => w.TownName.Equals(text[i + 1].ToUpper()));
-                    if (connect.Any())
-                    {
-                        cost = cost + connect.First().Cost;
-                        continue;
-                    }
-                    else
-                    {
-                        cost = 0;
-                        break;
-                    }
-                }
-                else if (text[i].ToUpper().Equals("D"))
-                {
-                    var connect = UnitOfWork.DRepository.Where(w => w.TownName.Equals(text[i + 1].ToUpper()));
-                    if (connect.Any())
-                    {
-                        cost = cost + connect.First().Cost;
-                        continue;
-                    }
-                    else
-                    {
-                        cost = 0;
-                        break;
-                    }
-                }
-                else if (text[i].ToUpper().Equals("E"))
-                {
-                    var connect = UnitOfWork.ERepository.Where(w => w.TownName.Equals(text[i + 1].ToUpper()));
-                    if (connect.Any())
-                    {
-                        cost = cost + connect.First().Cost;
-                        continue;
-                    }
-                    else
-                    {
-                        cost = 0;
-                        break;
-                    }
-                }
-                else if (text[i].ToUpper().Equals("F"))
-                {
-                    var connect = UnitOfWork.FRepository.Where(w => w.TownName.Equals(text[i + 1].ToUpper()));
-                    if (connect.Any())
-                    {
-                        cost = cost + connect.First().Cost;
-                        continue;
-                    }
-                    else
-                    {
-                        cost = 0;
-                        break;
-                    }
+                    cost = cost + connect.First().Cost;
+                    continue;
                 }
                 else
                 {
@@ -113,7 +35,6 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
                     break;
                 }
             }
-
             return cost;
         }
     }

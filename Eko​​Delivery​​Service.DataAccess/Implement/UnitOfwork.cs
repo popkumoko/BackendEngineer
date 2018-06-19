@@ -8,132 +8,82 @@ namespace Eko​​Delivery​​Service.DataAccess.Implement
 {
     public class UnitOfwork : IUnitOfwork
     {
-        private List<ConnectModel> IARepository;
-        private List<ConnectModel> IBRepository;
-        private List<ConnectModel> ICRepository;
-        private List<ConnectModel> IDRepository;
-        private List<ConnectModel> IERepository;
-        private List<ConnectModel> IFRepository;
+        private List<ConnectModel> IGraph;
 
-        public List<ConnectModel> ARepository
+        public List<ConnectModel> Graph
         {
-            get { return IARepository ?? (IARepository = GetAConnect()); }
-            set { IARepository = value; }
+            get { return IGraph ?? (IGraph = GetConnect()); }
+            set { IGraph = value; }
         }
 
-        public List<ConnectModel> BRepository
-        {
-            get { return IBRepository ?? (IBRepository = GetBConnect()); }
-            set { IBRepository = value; }
-        }
-
-        public List<ConnectModel> CRepository
-        {
-            get { return ICRepository ?? (ICRepository = GetCConnect()); }
-            set { ICRepository = value; }
-        }
-        public List<ConnectModel> DRepository
-        {
-            get { return IDRepository ?? (IDRepository = GetDConnect()); }
-            set { IDRepository = value; }
-        }
-        public List<ConnectModel> ERepository
-        {
-            get { return IERepository ?? (IERepository = GetEConnect()); }
-            set { IERepository = value; }
-        }
-        public List<ConnectModel> FRepository
-        {
-            get { return IFRepository ?? (IFRepository = GetFConnect()); }
-            set { IFRepository = value; }
-        }
-
-        private List<ConnectModel> GetAConnect()
+        private List<ConnectModel> GetConnect()
         {
             var result = new List<ConnectModel>();
             result.Add(new ConnectModel()
             {
-                TownName = "B",
+                PreviewNode = "A",
+                Node = "B",
                 Cost = 1
             });
             result.Add(new ConnectModel()
             {
-                TownName = "C",
+                PreviewNode = "A",
+                Node = "C",
                 Cost = 4
             });
             result.Add(new ConnectModel()
             {
-                TownName = "D",
+                PreviewNode = "A",
+                Node = "D",
                 Cost = 10
             });
 
-            return result;
-        }
-
-        private List<ConnectModel> GetBConnect()
-        {
-            var result = new List<ConnectModel>();
             result.Add(new ConnectModel()
             {
-                TownName = "E",
+                PreviewNode = "B",
+                Node = "E",
                 Cost = 3
             });
 
-            return result;
-        }
-
-        private List<ConnectModel> GetCConnect()
-        {
-            var result = new List<ConnectModel>();
             result.Add(new ConnectModel()
             {
-                TownName = "F",
-                Cost = 2
-            });
-            result.Add(new ConnectModel()
-            {
-                TownName = "D",
+                PreviewNode = "C",
+                Node = "D",
                 Cost = 4
             });
 
-            return result;
-        }
-
-        private List<ConnectModel> GetDConnect()
-        {
-            var result = new List<ConnectModel>();
             result.Add(new ConnectModel()
             {
-                TownName = "E",
-                Cost = 1
-            });
-
-            return result;
-        }
-
-        private List<ConnectModel> GetEConnect()
-        {
-            var result = new List<ConnectModel>();
-            result.Add(new ConnectModel()
-            {
-                TownName = "B",
-                Cost = 3
-            });
-            result.Add(new ConnectModel()
-            {
-                TownName = "A",
+                PreviewNode = "C",
+                Node = "F",
                 Cost = 2
             });
 
-            return result;
-        }
-
-        private List<ConnectModel> GetFConnect()
-        {
-            var result = new List<ConnectModel>();
             result.Add(new ConnectModel()
             {
-                TownName = "D",
+                PreviewNode = "D",
+                Node = "E",
+                Cost = 1
+            });
+
+            result.Add(new ConnectModel()
+            {
+                PreviewNode = "E",
+                Node = "B",
+                Cost = 3
+            });
+
+            result.Add(new ConnectModel()
+            {
+                PreviewNode = "E",
+                Node = "A",
+                Cost = 2
+            });
+
+            result.Add(new ConnectModel()
+            {
+                PreviewNode = "F",
+                Node = "D",
                 Cost = 1
             });
 

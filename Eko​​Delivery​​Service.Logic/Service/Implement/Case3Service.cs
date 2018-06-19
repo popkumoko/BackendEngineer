@@ -27,11 +27,11 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
 
             while((Cost == 0) || (SelectNode != End.ToUpper()))
             {
-                var Connect = getConnect(SelectNode);
+                var Connect = UnitOfWork.Graph.Where(w => w.PreviewNode == SelectNode);
 
                 foreach(var i in Connect)
                 {
-                    var update = Vector.Where(w => w.VectorNode == i.TownName).First();
+                    var update = Vector.Where(w => w.VectorNode == i.Node).First();
                     update.Cost = Cost + i.Cost;
                     update.Preview = SelectNode;
                     update.CheckOld = SelectNode + update.Cost.ToString();
@@ -101,35 +101,35 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
             return result;
         }
 
-        private List<ConnectModel> getConnect(string Node)
-        {
-            var connect = new List<ConnectModel>();
-            if (Node.Equals("A"))
-            {
-                connect = UnitOfWork.ARepository;
-            }
-            else if (Node.Equals("B"))
-            {
-                connect = UnitOfWork.BRepository;
-            }
-            else if (Node.Equals("C"))
-            {
-                connect = UnitOfWork.CRepository;
-            }
-            else if (Node.Equals("D"))
-            {
-                connect = UnitOfWork.DRepository;
-            }
-            else if (Node.Equals("E"))
-            {
-                connect = UnitOfWork.ERepository;
-            }
-            else if (Node.Equals("F"))
-            {
-                connect = UnitOfWork.FRepository;
-            }
-            return connect;
-        }
+        //private List<ConnectModel> getConnect(string Node)
+        //{
+        //    var connect = new List<ConnectModel>();
+        //    if (Node.Equals("A"))
+        //    {
+        //        connect = UnitOfWork.ARepository;
+        //    }
+        //    else if (Node.Equals("B"))
+        //    {
+        //        connect = UnitOfWork.BRepository;
+        //    }
+        //    else if (Node.Equals("C"))
+        //    {
+        //        connect = UnitOfWork.CRepository;
+        //    }
+        //    else if (Node.Equals("D"))
+        //    {
+        //        connect = UnitOfWork.DRepository;
+        //    }
+        //    else if (Node.Equals("E"))
+        //    {
+        //        connect = UnitOfWork.ERepository;
+        //    }
+        //    else if (Node.Equals("F"))
+        //    {
+        //        connect = UnitOfWork.FRepository;
+        //    }
+        //    return connect;
+        //}
     }
     
 
