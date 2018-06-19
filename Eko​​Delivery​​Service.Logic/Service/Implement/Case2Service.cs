@@ -25,7 +25,7 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
             var text = DFS.ToString();
 
 
-            string SelectNode = StartNode;
+            string SelectNode = StartNode.ToUpper();
             var CheckTwicePath = new List<string>();
             var CountPath = 0;
             var CheckNode = UnitOfWork.Graph;
@@ -53,7 +53,7 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
                 SelectNode = Connect.Node;
                 Connect.Check = true;
 
-                if (Connect.Node == EndNode)
+                if (Connect.Node == EndNode.ToUpper())
                 {
                     CountPath++;
                     var preview = DFS.First();
