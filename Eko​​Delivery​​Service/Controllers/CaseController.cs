@@ -34,5 +34,13 @@ namespace Eko​​Delivery​​Service.Controllers
             var result = LogicUnitOfWork.Case3Service.CalculateCheapestDeliveryCost(Start,End);
             return result;
         }
+
+        [HttpGet("GetPossibleDeliveryRouteWithMaximum")]
+        public object GetPossibleDeliveryRouteWithMaximum(string Start, string End,int Max)
+        {
+            var result = LogicUnitOfWork.Case2Service.GetPossibleDeliveryRouteWithMaximum(Start, End, Max);
+            return result;
+        }
+
     }
 }

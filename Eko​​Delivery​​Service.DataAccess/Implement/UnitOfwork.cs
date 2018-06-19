@@ -69,15 +69,15 @@ namespace Eko​​Delivery​​Service.DataAccess.Implement
             result.Add(new ConnectModel()
             {
                 PreviewNode = "E",
-                Node = "B",
-                Cost = 3
+                Node = "A",
+                Cost = 2
             });
 
             result.Add(new ConnectModel()
             {
                 PreviewNode = "E",
-                Node = "A",
-                Cost = 2
+                Node = "B",
+                Cost = 3
             });
 
             result.Add(new ConnectModel()

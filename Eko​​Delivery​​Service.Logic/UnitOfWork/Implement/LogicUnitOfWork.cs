@@ -13,6 +13,7 @@ namespace Eko​​Delivery​​Service.Logic.UnitOfWork.Implement
         private readonly IUnitOfwork UnitOfWork;
 
         private ICase1Service ICase1Service;
+        private ICase2Service ICase2Service;
         private ICase3Service ICase3Service;
 
         public LogicUnitOfWork(IUnitOfwork unitOfWork)
@@ -24,6 +25,12 @@ namespace Eko​​Delivery​​Service.Logic.UnitOfWork.Implement
         {
             get { return ICase1Service ?? (ICase1Service = new Case1Service(UnitOfWork)); }
             set { ICase1Service = value; }
+        }
+
+        public ICase2Service Case2Service
+        {
+            get { return ICase2Service ?? (ICase2Service = new Case2Service(UnitOfWork)); }
+            set { ICase2Service = value; }
         }
 
         public ICase3Service Case3Service
