@@ -100,36 +100,6 @@ namespace Eko​​Delivery​​Service.Logic.Service.Implement
 
             return result;
         }
-
-        //private List<ConnectModel> getConnect(string Node)
-        //{
-        //    var connect = new List<ConnectModel>();
-        //    if (Node.Equals("A"))
-        //    {
-        //        connect = UnitOfWork.ARepository;
-        //    }
-        //    else if (Node.Equals("B"))
-        //    {
-        //        connect = UnitOfWork.BRepository;
-        //    }
-        //    else if (Node.Equals("C"))
-        //    {
-        //        connect = UnitOfWork.CRepository;
-        //    }
-        //    else if (Node.Equals("D"))
-        //    {
-        //        connect = UnitOfWork.DRepository;
-        //    }
-        //    else if (Node.Equals("E"))
-        //    {
-        //        connect = UnitOfWork.ERepository;
-        //    }
-        //    else if (Node.Equals("F"))
-        //    {
-        //        connect = UnitOfWork.FRepository;
-        //    }
-        //    return connect;
-        //}
     }
     
 
